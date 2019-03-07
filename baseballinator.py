@@ -6,7 +6,7 @@
 # |    |   \ / __ \_\___ \\  ___/| \_\ \/ __ \|  |_|  |_|  |   |  \/ __ \|  | (  <_> )  | \/
 # |______  /(____  /____  >\___  >___  (____  /____/____/__|___|  (____  /__|  \____/|__|   
 # \/      \/     \/     \/    \/     \/                  \/     \/                   
-#                                                                                          v1.0
+#                                                                                          v1.1
 # 
 # By: Brad Nelson (@resquirrel_7)
 # Baseball program for Aaron at the Sweets.
@@ -83,6 +83,9 @@ def main_menu():
     print("7 - Reset Balls")
     print("8 - Reset Strikes")
     print("9 - Reset Outs")
+    print("10 - Add to Innings")
+    print("11 - Subtract from Innings")
+    print("12 - Reset Innings")
     print("0 - Exit")
 
     choice = input("> ")
@@ -131,6 +134,21 @@ def main_menu():
         reset_num(txt)
         print("The outs have been reset to 0!")
         main_menu()
+    elif str(choice) == "10":
+        txt = Path("./innings.txt")
+        increase_num(txt)
+        print("The innings have increased!")
+        main_menu()
+    elif str(choice) == "11":
+        txt = Path("./innings.txt")
+        decrease_num(txt)
+        print("The innings have decreased!")
+        main_menu()
+    elif str(choice) == "12":
+        txt = Path("./innings.txt")
+        reset_num(txt)
+        print("The innings have been reset to 0!")
+        main_menu()
     elif str(choice) == "0":
         exit()
     else:
@@ -142,7 +160,9 @@ print("Checking text files...")
 balls = Path("./balls.txt")
 strikes = Path("./strikes.txt")
 outs = Path("./outs.txt")
+innings = Path("./innings.txt")
 file_check(balls)
 file_check(strikes)
 file_check(outs)
+file_check(innings)
 main_menu()
