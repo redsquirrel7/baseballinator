@@ -6,7 +6,7 @@
 # |    |   \ / __ \_\___ \\  ___/| \_\ \/ __ \|  |_|  |_|  |   |  \/ __ \|  | (  <_> )  | \/
 # |______  /(____  /____  >\___  >___  (____  /____/____/__|___|  (____  /__|  \____/|__|   
 # \/      \/     \/     \/    \/     \/                  \/     \/                   
-#                                                                                          v1.1
+#                                                                                          v1.2
 # 
 # By: Brad Nelson (@resquirrel_7)
 # Baseball program for Aaron at the Sweets.
@@ -86,6 +86,12 @@ def main_menu():
     print("10 - Add to Innings")
     print("11 - Subtract from Innings")
     print("12 - Reset Innings")
+    print("13 - Add to Home Score")
+    print("14 - Add to Away Score")
+    print("15 - Subtract from Home Score")
+    print("16 - Subtract from Away Score")
+    print("17 - Reset Home Score")
+    print("18 - Reset Away Score")
     print("0 - Exit")
 
     choice = input("> ")
@@ -149,6 +155,36 @@ def main_menu():
         reset_num(txt)
         print("The innings have been reset to 0!")
         main_menu()
+    elif str(choice) == "13":
+        txt = Path("./home.txt")
+        increase_num(txt)
+        print("The Home Score has increased!")
+        main_menu()
+    elif str(choice) == "14":
+        txt = Path("./away.txt")
+        increase_num(txt)
+        print("The Away Score has increased!")
+        main_menu()
+    elif str(choice) == "15":
+        txt = Path("./home.txt")
+        decrease_num(txt)
+        print("The Home Score has decreased!")
+        main_menu()
+    elif str(choice) == "16":
+        txt = Path("./away.txt")
+        decrease_num(txt)
+        print("The Away Score has decreased!")
+        main_menu()
+    elif str(choice) == "17":
+        txt = Path("./home.txt")
+        reset_num(txt)
+        print("The Home Score has been reset!")
+        main_menu()
+    elif str(choice) == "18":
+        txt = Path("./away.txt")
+        reset_num(txt)
+        print("The Away Score has been reset!")
+        main_menu()
     elif str(choice) == "0":
         exit()
     else:
@@ -161,8 +197,12 @@ balls = Path("./balls.txt")
 strikes = Path("./strikes.txt")
 outs = Path("./outs.txt")
 innings = Path("./innings.txt")
+home = Path("./home.txt")
+away = Path("./away.txt")
 file_check(balls)
 file_check(strikes)
 file_check(outs)
 file_check(innings)
+file_check(home)
+file_check(away)
 main_menu()
