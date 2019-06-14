@@ -5,7 +5,7 @@ You will need to have Python 3.x installed and pathlib.
 
 pip install pathlib
 
-#Version Notes
+# Version Notes
 
 Version 1.1
 - Added Innings feature
