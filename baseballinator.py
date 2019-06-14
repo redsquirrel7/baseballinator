@@ -6,7 +6,7 @@
 # |    |   \ / __ \_\___ \\  ___/| \_\ \/ __ \|  |_|  |_|  |   |  \/ __ \|  | (  <_> )  | \/
 # |______  /(____  /____  >\___  >___  (____  /____/____/__|___|  (____  /__|  \____/|__|   
 # \/      \/     \/     \/    \/     \/                  \/     \/                   
-#                                                                                          v1.2
+#                                                                                          v1.3
 # 
 # By: Brad Nelson (@resquirrel_7)
 # Baseball program for Aaron at the Sweets.
@@ -43,7 +43,7 @@ def file_check(fname):
 # Increase number in file.
 def increase_num(fname):
     f = open(str(fname),"r")
-    num = f.read(1)
+    num = f.read(2)
     f.close()
     f = open(str(fname),"w")
     newnum = int(num) + 1
@@ -61,7 +61,7 @@ def reset_num(fname):
 # Decrease number in file (just in case).
 def decrease_num(fname):
     f = open(str(fname),"r")
-    num = f.read(1)
+    num = f.read(22)
     f.close()
     f = open(str(fname),"w")
     newnum = int(num) - 1
