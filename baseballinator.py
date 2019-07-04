@@ -131,7 +131,7 @@ def main_menu():
         print("The balls have been reset to 0!")
         main_menu()
     elif str(choice) == "8":
-        txt = Path("./strikes")
+        txt = Path("./strikes.txt")
         reset_num(txt)
         print("The strikes have been reset to 0!")
         main_menu()
