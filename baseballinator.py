@@ -8,7 +8,7 @@
 # \/      \/     \/     \/    \/     \/                  \/     \/                   
 #                                                                                          v1.3
 # 
-# By: Brad Nelson (@resquirrel_7)
+# By: Squ1rr3l (@resquirrel_7)
 # Baseball program for Aaron at the Sweets.
 
 import os.path
